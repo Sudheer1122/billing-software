@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Navbar from "../components/Navbar";
 import InvoiceDemo from "../components/InvoiceDemo";
 import Pricing from "../components/Pricing";
@@ -27,7 +27,7 @@ const iconMap: any = {
   shield: ShieldCheck,
 };
 
-const reveal = {
+const reveal: Variants = {
   hidden: {
     opacity: 0,
     y: 24,
