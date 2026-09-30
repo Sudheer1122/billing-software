@@ -16,6 +16,9 @@ import {
   Zap,
   Download,
   Loader2,
+  Search,
+  Settings,
+  UserRound,
 } from "lucide-react";
 
 export {
@@ -36,4 +39,7 @@ export {
   Zap,
   Download,
   Loader2,
+  Search,
+  Settings,
+  UserRound,
 };

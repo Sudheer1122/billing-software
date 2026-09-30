@@ -7,29 +7,22 @@ const today = new Date();
 
 const due = new Date(today);
 
-due.setDate(
-  due.getDate() + 15
-);
+due.setDate(due.getDate() + 15);
 
-const existing =
-  await prisma.invoice.findUnique({
-    where: {
-      invoiceNumber:
-        "INV-DEMO-001",
-    },
-  });
+const existing = await prisma.invoice.findUnique({
+  where: {
+    invoiceNumber: "INV-DEMO-001",
+  },
+});
 
 if (!existing) {
   await prisma.invoice.create({
     data: {
-      invoiceNumber:
-        "INV-DEMO-001",
+      invoiceNumber: "INV-DEMO-001",
 
-      customerName:
-        "Northstar Studio",
+      customerName: "Northstar Studio",
 
-      customerEmail:
-        "billing@northstar.example",
+      customerEmail: "billing@northstar.example",
 
       dueDate: due,
 
@@ -42,8 +35,7 @@ if (!existing) {
       items: {
         create: [
           {
-            description:
-              "Website retainer",
+            description: "Website retainer",
 
             quantity: 1,
 
@@ -53,8 +45,7 @@ if (!existing) {
           },
 
           {
-            description:
-              "Product design",
+            description: "Product design",
 
             quantity: 2,
 
@@ -64,8 +55,7 @@ if (!existing) {
           },
 
           {
-            description:
-              "Support hours",
+            description: "Support hours",
 
             quantity: 4,
 

@@ -53,22 +53,20 @@ export default function Pricing() {
       <div className="mx-auto mb-12 flex w-fit items-center gap-1 rounded-full border bg-white p-1 shadow-sm">
         <button
           onClick={() => setYearly(false)}
-          className={`rounded-full px-5 py-2 text-sm font-bold ${
-            !yearly
-              ? "bg-[#10152b] text-white"
-              : ""
-          }`}
+          className={`rounded-full px-5 py-2 text-sm font-bold ${!yearly
+            ? "bg-[#10152b] text-white"
+            : ""
+            }`}
         >
           Monthly
         </button>
 
         <button
           onClick={() => setYearly(true)}
-          className={`rounded-full px-5 py-2 text-sm font-bold ${
-            yearly
-              ? "bg-[#10152b] text-white"
-              : ""
-          }`}
+          className={`rounded-full px-5 py-2 text-sm font-bold ${yearly
+            ? "bg-[#10152b] text-white"
+            : ""
+            }`}
         >
           Yearly{" "}
           <span className="ml-1 text-emerald-500">
@@ -81,11 +79,10 @@ export default function Pricing() {
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className={`relative rounded-3xl border p-7 ${
-              plan.popular
-                ? "border-[#6d64f4] bg-[#10152b] text-white shadow-xl shadow-indigo-100"
-                : "bg-white"
-            }`}
+            className={`relative rounded-3xl border p-7 ${plan.popular
+              ? "border-[#6d64f4] bg-[#10152b] text-white shadow-xl shadow-indigo-100"
+              : "bg-white"
+              }`}
           >
             {plan.popular && (
               <span className="absolute right-6 top-6 rounded-full bg-[#7268ff] px-3 py-1 text-[11px] font-bold">
@@ -94,21 +91,19 @@ export default function Pricing() {
             )}
 
             <p
-              className={`text-sm font-bold ${
-                plan.popular
-                  ? "text-indigo-200"
-                  : "text-[#625bf0]"
-              }`}
+              className={`text-sm font-bold ${plan.popular
+                ? "text-indigo-200"
+                : "text-[#625bf0]"
+                }`}
             >
               {plan.name}
             </p>
 
             <p
-              className={`mt-3 text-sm ${
-                plan.popular
-                  ? "text-slate-300"
-                  : "text-slate-500"
-              }`}
+              className={`mt-3 text-sm ${plan.popular
+                ? "text-slate-300"
+                : "text-slate-500"
+                }`}
             >
               {plan.desc}
             </p>
@@ -124,11 +119,10 @@ export default function Pricing() {
             </div>
 
             <button
-              className={`w-full rounded-xl py-3 font-bold ${
-                plan.popular
-                  ? "bg-white text-[#10152b]"
-                  : "bg-[#10152b] text-white"
-              }`}
+              className={`w-full rounded-xl py-3 font-bold ${plan.popular
+                ? "bg-white text-[#10152b]"
+                : "bg-[#10152b] text-white"
+                }`}
             >
               Start 14-day trial
             </button>
