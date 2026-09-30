@@ -13,9 +13,7 @@ export async function createInvoice(payload: unknown) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(
-      data.message || "Unable to create invoice"
-    );
+    throw new Error(data.message || "Unable to create invoice");
   }
 
   return data;
